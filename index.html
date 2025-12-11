@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartAccess — система контролю доступу та обліку відвідуваності</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Іконки Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+<header class="site-header" id="mainHeader">
+    <div class="header-background"></div>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <div class="logo-mark">
+                <div class="logo-inner"></div>
+            </div>
+            <span class="logo-text">SmartAccess</span>
+        </a>
+
+        <nav class="nav" id="navMenu">
+            <a href="#about" class="nav-link">Про систему</a>
+            <a href="#features" class="nav-link">Можливості</a>
+            <a href="#tech" class="nav-link">Технології</a>
+            <a href="#stats" class="nav-link">Статистика</a>
+            <a href="#ui" class="nav-link">Інтерфейс</a>
+            <a href="#usage" class="nav-link">Застосування</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link nav-link-cta">Контакти</a>
+        </nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Відкрити меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO з відео -->
+<section class="hero">
+    <video class="hero-video" src="Video.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="hero-text">
+            <p class="hero-label">Система контролю доступу</p>
+            <h1>SmartAccess — облік відвідуваності та безпечний доступ до приміщень</h1>
+            <p class="hero-subtitle">
+                Навчальний проєкт, що демонструє, як можна поєднати контроль доступу,
+                автоматичний облік відвідувачів та наочну статистику в одному інтерфейсі.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#ui" class="btn btn-primary">
+                    <i class="fa-solid fa-display"></i>
+                    Подивитися інтерфейс
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Дізнатись більше
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fa-solid fa-envelope"></i>
+                    Зв'язатися
+                </a>
+            </div>
+
+            <div class="hero-badges">
+                <span><i class="fa-solid fa-user-check"></i> Облік відвідуваності</span>
+                <span><i class="fa-solid fa-door-closed"></i> Контроль доступу</span>
+                <span><i class="fa-solid fa-chart-line"></i> Статистика в реальному часі</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- Про систему -->
+    <section id="about" class="section section-dark">
+        <div class="container split">
+            <div class="text-block slide-in-left">
+                <h2>Що таке SmartAccess?</h2>
+                <p>
+                    SmartAccess — це концепція комп’ютеризованої системи, яка поєднує
+                    <strong>контроль доступу до приміщень</strong> з
+                    <strong>автоматичним обліком відвідуваності</strong>.
+                </p>
+                <p>
+                    Система фіксує всі входи та виходи, рахує кількість людей у приміщенні та
+                    відображає агреговану статистику в зручному інтерфейсі. Проєкт створений як
+                    навчальний MVP для демонстрації можливостей такого рішення.
+                </p>
+            </div>
+
+            <div class="info-cards">
+                <article class="info-card fade-in">
+                    <i class="fa-solid fa-bullseye info-icon"></i>
+                    <h3>Мета Landing Page</h3>
+                    <p>
+                        Коротко й наочно показати, як працює SmartAccess, які задачі вирішує
+                        та в чому його користь для навчальних закладів і компаній.
+                    </p>
+                </article>
+
+                <article class="info-card fade-in">
+                    <i class="fa-solid fa-users-viewfinder info-icon"></i>
+                    <h3>Кому корисно</h3>
+                    <p>
+                        Адміністрації університетів, офісних центрів, коворкінгів та будь-яких
+                        організацій, де важливо контролювати потік людей.
+                    </p>
+                </article>
+
+                <article class="info-card fade-in">
+                    <i class="fa-solid fa-lightbulb info-icon"></i>
+                    <h3>Навчальний проєкт</h3>
+                    <p>
+                        Landing Page демонструє концепцію системи, використовуючи
+                        сучасний UI, адаптивний дизайн та приклад екрану статистики.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Можливості -->
+    <section id="features" class="section section-gradient">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ключові можливості SmartAccess</h2>
+                <p>Основний функціонал, який може бути реалізований у системі.</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-person-walking-arrow-right feature-icon"></i>
+                    <h3>Облік входів та виходів</h3>
+                    <p>
+                        Фіксація кожного входу та виходу з приміщення з прив’язкою до часу
+                        та користувача (за карткою чи ідентифікатором).
+                    </p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-users feature-icon"></i>
+                    <h3>Кількість людей у приміщенні</h3>
+                    <p>
+                        Поточна кількість присутніх оновлюється в реальному часі,
+                        що дозволяє контролювати заповненість аудиторій або офісів.
+                    </p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-shield-halved feature-icon"></i>
+                    <h3>Контроль доступу</h3>
+                    <p>
+                        Обмеження доступу для неавторизованих користувачів та фіксація
+                        усіх спроб проходу через систему.
+                    </p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-chart-pie feature-icon"></i>
+                    <h3>Статистика відвідуваності</h3>
+                    <p>
+                        Графіки та показники за день, тиждень чи місяць: пікові години,
+                        найзавантаженіші приміщення, динаміка використання.
+                    </p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-bell feature-icon"></i>
+                    <h3>Попередження та події</h3>
+                    <p>
+                        Сповіщення про перевищення ліміту людей, несанкціоновані спроби
+                        доступу та інші важливі події.
+                    </p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <i class="fa-solid fa-gears feature-icon"></i>
+                    <h3>Гнучка конфігурація</h3>
+                    <p>
+                        Можливість налаштувати приміщення, ролі користувачів,
+                        рівні доступу та параметри журналу подій.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технології та характеристики -->
+    <section id="tech" class="section section-gradient">
+        <div class="container">
+            <div class="section-header">
+                <h2>Технології та характеристики</h2>
+                <p>Детальна інформація про технічні можливості системи</p>
+            </div>
+
+            <div class="tabs-container fade-in">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="hardware">
+                        <i class="fa-solid fa-microchip"></i>
+                        Обладнання
+                    </button>
+                    <button class="tab-btn" data-tab="software">
+                        <i class="fa-solid fa-code"></i>
+                        Програмне забезпечення
+                    </button>
+                    <button class="tab-btn" data-tab="security">
+                        <i class="fa-solid fa-shield"></i>
+                        Безпека
+                    </button>
+                    <button class="tab-btn" data-tab="integration">
+                        <i class="fa-solid fa-plug"></i>
+                        Інтеграції
+                    </button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="hardware">
+                        <div class="tab-content-grid">
+                            <div class="tab-item">
+                                <i class="fa-solid fa-id-card tab-item-icon"></i>
+                                <h3>RFID картки</h3>
+                                <p>Підтримка стандартних RFID карток для ідентифікації користувачів з високою точністю та швидкістю зчитування.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-mobile-screen-button tab-item-icon"></i>
+                                <h3>Мобільні додатки</h3>
+                                <p>Можливість використання смартфонів як ключів доступу через NFC технологію або QR-коди.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-camera tab-item-icon"></i>
+                                <h3>Відеоспостереження</h3>
+                                <p>Інтеграція з системами відеоспостереження для додаткового контролю та аналітики.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-server tab-item-icon"></i>
+                                <h3>Серверне обладнання</h3>
+                                <p>Масштабована архітектура з можливістю розгортання в хмарі або локально.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="software">
+                        <div class="tab-content-grid">
+                            <div class="tab-item">
+                                <i class="fa-solid fa-window-maximize tab-item-icon"></i>
+                                <h3>Веб-інтерфейс</h3>
+                                <p>Сучасний адаптивний веб-інтерфейс з підтримкою всіх сучасних браузерів та мобільних пристроїв.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-database tab-item-icon"></i>
+                                <h3>База даних</h3>
+                                <p>Надійне зберігання даних з автоматичним резервним копіюванням та захистом інформації.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-chart-bar tab-item-icon"></i>
+                                <h3>Аналітика</h3>
+                                <p>Потужні інструменти аналітики з візуалізацією даних, звітами та експортом у різні формати.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-bell-on tab-item-icon"></i>
+                                <h3>Сповіщення</h3>
+                                <p>Система сповіщень через email, SMS та push-нотифікації для важливих подій.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="security">
+                        <div class="tab-content-grid">
+                            <div class="tab-item">
+                                <i class="fa-solid fa-lock tab-item-icon"></i>
+                                <h3>Шифрування</h3>
+                                <p>Всі дані передаються та зберігаються з використанням сучасних алгоритмів шифрування.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-user-shield tab-item-icon"></i>
+                                <h3>Контроль доступу</h3>
+                                <p>Багаторівнева система авторизації з підтримкою ролей та прав доступу.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-file-shield tab-item-icon"></i>
+                                <h3>Аудит</h3>
+                                <p>Детальний журнал всіх дій та подій для відстеження та аналізу безпекових подій.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-shield-halved tab-item-icon"></i>
+                                <h3>Захист від атак</h3>
+                                <p>Вбудовані механізми захисту від DDoS атак, SQL-ін'єкцій та інших загроз.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="integration">
+                        <div class="tab-content-grid">
+                            <div class="tab-item">
+                                <i class="fa-solid fa-calendar-days tab-item-icon"></i>
+                                <h3>Календарні системи</h3>
+                                <p>Інтеграція з Google Calendar, Outlook та іншими календарними системами.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-users-gear tab-item-icon"></i>
+                                <h3>HR системи</h3>
+                                <p>Синхронізація з HR-системами для автоматичного оновлення списків користувачів.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-building tab-item-icon"></i>
+                                <h3>Системи управління</h3>
+                                <p>API для інтеграції з системами управління будівлею (BMS) та освітленням.</p>
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-cloud tab-item-icon"></i>
+                                <h3>Хмарні сервіси</h3>
+                                <p>Підтримка інтеграції з AWS, Azure та іншими хмарними платформами.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Переваги -->
+    <section id="benefits" class="section section-muted">
+        <div class="container">
+            <div class="section-header">
+                <h2>Переваги SmartAccess</h2>
+                <p>Чому варто обрати нашу систему</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fa-solid fa-handshake"></i>
+                        Стати клієнтом
+                    </a>
+                </div>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">01</div>
+                    <i class="fa-solid fa-clock-rotate-left benefit-icon"></i>
+                    <h3>Економія часу</h3>
+                    <p>Автоматизація обліку відвідуваності економить до 80% часу адміністративного персоналу.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">02</div>
+                    <i class="fa-solid fa-dollar-sign benefit-icon"></i>
+                    <h3>Зниження витрат</h3>
+                    <p>Оптимізація використання приміщень дозволяє зменшити операційні витрати на 30-40%.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">03</div>
+                    <i class="fa-solid fa-shield-heart benefit-icon"></i>
+                    <h3>Підвищення безпеки</h3>
+                    <p>Контроль доступу забезпечує безпеку приміщень та захист від несанкціонованого доступу.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">04</div>
+                    <i class="fa-solid fa-chart-line benefit-icon"></i>
+                    <h3>Детальна аналітика</h3>
+                    <p>Отримуйте детальні звіти та інсайти для прийняття обґрунтованих рішень.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">05</div>
+                    <i class="fa-solid fa-mobile-screen-button benefit-icon"></i>
+                    <h3>Мобільність</h3>
+                    <p>Доступ до системи з будь-якого пристрою в будь-який час з будь-якого місця.</p>
+                </div>
+
+                <div class="benefit-card fade-in">
+                    <div class="benefit-number">06</div>
+                    <i class="fa-solid fa-headset benefit-icon"></i>
+                    <h3>Підтримка 24/7</h3>
+                    <p>Круглосуточна технічна підтримка та консультації від наших експертів.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section id="stats" class="section section-dark stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>SmartAccess у цифрах</h2>
+                <p>Потужність системи в реальних показниках</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-chart-bar"></i>
+                        Замовити звіт
+                    </a>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fa-solid fa-users-line stat-icon"></i>
+                    </div>
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Активних користувачів</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fa-solid fa-door-open stat-icon"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Контрольованих приміщень</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fa-solid fa-clock stat-icon"></i>
+                    </div>
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">% Точність обліку</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fa-solid fa-chart-line stat-icon"></i>
+                    </div>
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Моніторинг 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Інтерфейс -->
+    <section id="ui" class="section section-dark">
+        <div class="container ui-layout">
+            <div class="text-block slide-in-left">
+                <h2>Інтерфейс SmartAccess</h2>
+                <p>
+                    Інтерфейс системи створений у темній гамі з акцентом на читабельність
+                    та наочність даних. Окремі блоки показують відвідуваність, контроль
+                    доступу, журнал подій та поточну кількість людей у приміщеннях.
+                </p>
+                <ul class="bullet-list">
+                    <li>
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                        Блок «Відвідуваність» з ключовими показниками за сьогодні та зміну.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-person-walking-luggage"></i>
+                        Перегляд, скільки людей зараз у приміщенні та де можливі перевантаження.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                        Журнал подій із фільтрами: успішні входи, виходи, відмови доступу.
+                    </li>
+                </ul>
+                <div class="ui-actions" style="margin-top: 1.5rem;">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i>
+                        Замовити демо
+                    </a>
+                    <a href="#tech" class="btn btn-outline">
+                        <i class="fa-solid fa-gear"></i>
+                        Технічні деталі
+                    </a>
+                </div>
+            </div>
+
+            <div class="ui-image-wrapper slide-in-right">
+                <img src="Smartaccess.png" alt="Приклад інтерфейсу SmartAccess" class="ui-image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Де застосувати -->
+    <section id="usage" class="section section-muted">
+        <div class="container">
+            <div class="section-header">
+                <h2>Де SmartAccess буде корисним</h2>
+                <p>Кілька типових сценаріїв використання системи.</p>
+            </div>
+
+            <div class="usage-grid">
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-building-columns usage-icon"></i>
+                    <h3>Університети та коледжі</h3>
+                    <p>
+                        Облік відвідуваності аудиторій, контроль доступу до лабораторій
+                        та службових приміщень.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-briefcase usage-icon"></i>
+                    <h3>Офісні простори</h3>
+                    <p>
+                        Контроль доступу до робочих зон, переговорних кімнат та серверних приміщень.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-warehouse usage-icon"></i>
+                    <h3>Склада та технічні зони</h3>
+                    <p>
+                        Доступ лише для персоналу, фіксація кожного відвідування та віддалений моніторинг.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-hospital usage-icon"></i>
+                    <h3>Медичні заклади</h3>
+                    <p>
+                        Контроль доступу до палат, операційних та медичних архівів з дотриманням конфіденційності.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-shop usage-icon"></i>
+                    <h3>Торгові центри</h3>
+                    <p>
+                        Моніторинг відвідуваності, контроль доступу до службових зон та аналітика потоку клієнтів.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="usage-card fade-in">
+                    <i class="fa-solid fa-industry usage-icon"></i>
+                    <h3>Виробничі підприємства</h3>
+                    <p>
+                        Контроль доступу до виробничих зон, облік робочого часу та забезпечення безпеки.
+                    </p>
+                    <a href="#contact" class="usage-link">
+                        Дізнатися більше <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Часті питання</h2>
+                <p>Відповіді на найпоширеніші питання про SmartAccess</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Як працює система SmartAccess?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            SmartAccess використовує RFID картки або мобільні пристрої для ідентифікації користувачів.
+                            При підході до контрольної точки система зчитує ідентифікатор, перевіряє права доступу
+                            та фіксує подію входу/виходу. Всі дані зберігаються в базі даних та відображаються
+                            в реальному часі в веб-інтерфейсі.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Скільки часу займає впровадження системи?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Час впровадження залежить від масштабу проєкту. Для малих об'єктів (до 10 приміщень)
+                            впровадження займає 1-2 тижні. Для великих об'єктів (100+ приміщень) - 1-2 місяці.
+                            Ми надаємо повну підтримку на етапі впровадження та навчання персоналу.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Чи можна інтегрувати SmartAccess з існуючими системами?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Так, SmartAccess має відкритий API для інтеграції з іншими системами. Ми підтримуємо
+                            інтеграцію з HR-системами, календарями, системами управління будівлею та іншими
+                            корпоративними рішеннями. Наші експерти допоможуть налаштувати інтеграцію під ваші потреби.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Як забезпечується безпека даних?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Всі дані передаються та зберігаються з використанням сучасного шифрування (AES-256).
+                            Система відповідає вимогам GDPR та іншим стандартам захисту даних. Регулярні резервні
+                            копії та моніторинг безпеки забезпечують надійність системи.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Чи потрібне спеціальне обладнання?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Для роботи системи потрібні RFID зчитувачі на кожній контрольній точці та серверне
+                            обладнання (може бути хмарним). Картки доступу надаються разом з системою. Також
+                            можна використовувати мобільні пристрої як альтернативу карткам.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Яка технічна підтримка надається?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Ми надаємо технічну підтримку 24/7 через телефон, email та онлайн-чат. Також доступні
+                            регулярні оновлення програмного забезпечення, консультації та навчання персоналу.
+                            Для великих клієнтів доступна виділена команда підтримки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Зв'язатися з розробником</h2>
+                <p>
+                    Залиште повідомлення, якщо хочете дізнатися більше про концепцію
+                    SmartAccess або отримати презентацію проєкту.
+                </p>
+            </div>
+
+            <form id="contactForm" class="contact-form fade-in">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Ваше ім’я</label>
+                        <input type="text" id="name" placeholder="Введіть ваше ім’я" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="organization">Організація</label>
+                        <input type="text" id="organization" placeholder="Наприклад, НУБіП України" />
+                    </div>
+                    <div class="form-group">
+                        <label for="orgType">Тип організації</label>
+                        <select id="orgType">
+                            <option value="Навчальний заклад">Навчальний заклад</option>
+                            <option value="Офісна компанія">Офісна компанія</option>
+                            <option value="Бізнес-центр">Бізнес-центр</option>
+                            <option value="Інше">Інше</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Коментар / запит</label>
+                    <textarea id="comment" rows="4" placeholder="Ваше повідомлення..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Відправити
+                </button>
+
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <p class="footer-brand">SmartAccess</p>
+        <p class="footer-copy">Навчальний промо-проєкт системи контролю доступу та обліку відвідуваності.</p>
+    </div>
+</footer>
+
+<!-- Кнопка "Наверх" -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Повернутися наверх">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
